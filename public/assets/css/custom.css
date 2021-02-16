@@ -1,0 +1,7 @@
+.wizard>.content>.body {
+    position: inherit !important;
+}
+
+.wizard>.content {
+    background-color: #fff !important;
+}
