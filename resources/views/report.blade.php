@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title') 
-{{$report->type}}
+Report
 @endsection
 @section('content')
 
@@ -9,13 +9,13 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h2>{{$report->headline[Config::get('app.locale')]}}</h2>
-                <p>{{$report->description[Config::get('app.locale')]}}</p>
+                <h2>Report</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, non!</p>
                 <div>
-                <object data="{{Storage::url($report->file) }}#page=2" type="application/pdf" width="100%" height="500">
-                    <iframe src="{{ asset('assets/pdf/sample.pdf') }}#page=2" width="100%" height="100%" style="border: none;">
+                <object data="#" type="application/pdf" width="100%" height="500">
+                    <iframe src="#" width="100%" height="100%" style="border: none;">
                     This browser does not support PDFs. Please download the PDF to view it: 
-                    <a href="{{Storage::url($report->file) }}">Download PDF</a>
+                    <a href="#">Download PDF</a>
                     </iframe>
                 </object>
                 </div>
@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p>{{$report->buttom_desc[Config::get('app.locale')]}}</p>
+                <p>Bottom description/p>
             </div>
         </div>
     </div>

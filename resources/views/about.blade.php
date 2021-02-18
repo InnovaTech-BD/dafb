@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row wow fadeInUp">
             <div class="col-md-8">
-                <h2>{{$about->headline[Config::get('app.locale')]}}</h2>
-                <p>{!!$about->description[Config::get('app.locale')]!!}</p>
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque corporis, odio eos libero dolorum aspernatur exercitationem facilis impedit perspiciatis culpa reiciendis officia possimus dolor minima dolore. Molestias eligendi veniam dolor dicta asperiores nam consequatur cumque recusandae quasi. Ex nemo consectetur quibusdam cupiditate nostrum aperiam dolorem aspernatur, mollitia iusto vitae?</p>
             </div>
             <div class="col-md-4">
                 @include('layouts.frontend.partials.category')
@@ -20,8 +20,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>{{$about->headline2[Config::get('app.locale')]}}</h2>
-                <p>{!!$about->description2[Config::get('app.locale')]!!}</p>
+                <h2>Heading 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere modi perferendis expedita dolores corporis quisquam commodi deleniti voluptate iure, unde, facilis cupiditate aperiam nam, quos omnis sequi sunt eius?</p>
             </div>
         </div>
     </div>
@@ -42,32 +42,32 @@
                     supply, we take initiatives to provide clean drinking water to the community.</p>
             </div>
             <div class="col-md-6">
-                <img src="{{('images/people/item-4-1.png') }}" alt="">
+                
             </div>
         </div>
     </div>
 </section> -->
 
-@if($about->hasGallery())
+
 
 <section class="gallery">
     <div class="container wow fadeInUp">
-        <h2>{{__('header.gallery')}}</h2>
+        <h2>Gallery</h2>
         <div class="row mt-5 wow fadeInUp">
-            @foreach ($about->gallery->images as $image)
+            
             <div class="col-md-4 mb-5">
                 <div class="gallery-img">
-                    <a class="view-img" data-width="2048" data-height="1365"    data-fancybox="gallery" href="{{Storage::url($image->image)}}">
-                        <img class="img-fluid w-100" src="{{Storage::url($image->image)}}" alt="">   
+                    <a class="view-img" data-width="2048" data-height="1365"    data-fancybox="gallery" href="#">
+                        <img class="img-fluid w-100" src="#" alt="">   
                     </a>               
                 </div>
             </div>
-            @endforeach
+            
         </div> 
          <!-- ./row -->
     </div> <!-- ./container -->
 </section> <!-- ./gallery -->
-@endif
+
 <!-- it-works -
 <section class="it-works">
     <div class="container">
