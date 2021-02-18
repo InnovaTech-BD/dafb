@@ -123,7 +123,9 @@ Route::group(['as'=>'app.','prefix'=>'app','middleware' => ['auth']], function (
      Route::post('scholarships/status',[ScholarshipController::class,'status'])->name('scholarships.status');
 
      //Report
-     Route::get('reports',[AnualReportController::class,'index'])->name('reports.index');
+     Route::get('reports',function(){
+         return view('reports');
+     })->name('reports');
      //Route::get('reports/create',[AnualReportController::class,'create'])->name('reports.create');
      //Route::post('reports/store',[AnualReportController::class,'store'])->name('reports.store');
      Route::get('reports/{anualReport}/edit',[AnualReportController::class,'edit'])->name('reports.edit');
@@ -145,9 +147,7 @@ Route::get('event/{slug}',[EventsController::class,'show'])->name('events.show')
 Route::get('report/{type}',[ReportController::class,'getReport'])->name('report.show');
 Route::post('scholarship/form',ScholarshipForm::class)->name('scholarship.store');
 Route::get('/about', function(){
-    return view('about',[
-        'about'=>About::latest()->first()
-    ]);
+    return view('about');
 })->name('about');
 Route::get('/team', function(){
     return view('team',[
